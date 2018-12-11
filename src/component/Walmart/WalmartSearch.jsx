@@ -155,7 +155,7 @@ class WalmartSearch extends Component {
 					<Col sm={8}>
 						<Row>
 							<Form>
-								<Col xs={10} sm={10}>
+								<Col xs={9} sm={10}>
 									<FormGroup controlId="productName">
 										<FormControl
 											type="text"
@@ -165,7 +165,7 @@ class WalmartSearch extends Component {
 										/>
 									</FormGroup>
 								</Col>
-								<Col xs={2} sm={2}>
+								<Col xs={3} sm={2}>
 									<Button bsStyle="primary" type="submit" onClick={this.handleSubmit}>
 										Search
 									</Button>

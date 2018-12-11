@@ -1,0 +1,23 @@
+.container {
+	background: white;
+	min-height: 100vh;
+}
+
+.row {
+	margin: 0;
+}
+
+.searchable {
+	cursor: pointer;
+	margin-bottom: 1px;
+	margin-top: 1px;
+}
+
+.searchable:hover {
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.red {
+	color: rgb(143, 42, 42);
+}

@@ -55,7 +55,7 @@ class WalmartSearch extends Component {
 		} else {
 			apiURL = 'https://walmartsearch.herokuapp.com/walmart/product/';
 		}
-
+		console.log('api URL IS ', apiURL);
 		let response = await axios.get(`${apiURL}${searchValue}`);
 		let products = response.data.items;
 

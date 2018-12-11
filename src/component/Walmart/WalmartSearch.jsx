@@ -53,7 +53,7 @@ class WalmartSearch extends Component {
 		if (process.env.NODE_ENV === 'development') {
 			apiURL = process.env.REACT_APP_DEV_ENV;
 		} else {
-			apiURL = process.env.REACT_APP_PROD_ENV;
+			apiURL = 'https://walmartsearch.herokuapp.com/walmart/product/';
 		}
 
 		let response = await axios.get(`${apiURL}${searchValue}`);

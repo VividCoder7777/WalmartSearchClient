@@ -1,5 +1,6 @@
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.0.0/workbox-sw.js');
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js');
 // test
+workbox.clientsClaim();
 workbox.precaching.precacheAndRoute([]);
 
 workbox.precaching.suppressWarnings();

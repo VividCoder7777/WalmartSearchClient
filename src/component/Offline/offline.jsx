@@ -18,7 +18,7 @@ class OfflineNotification extends Component {
 	displayOnlineAlert = () => {
 		return (
 			<Alert bsStyle="warning">
-				<strong>Welcome!</strong> Access the products that you need!.
+				<strong>Welcome!</strong> Access the products that you need!
 			</Alert>
 		);
 	};

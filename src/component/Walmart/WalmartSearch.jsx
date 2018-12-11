@@ -47,9 +47,18 @@ class WalmartSearch extends Component {
 
 	updateProducts = async (searchValue) => {
 		this.setLoading(true);
-		let response = await axios.get(`http://localhost:3001/walmart/product/${searchValue}`);
+
+		let apiURL = '';
+
+		if (process.env.NODE_ENV === 'development') {
+			apiURL = process.env.REACT_APP_DEV_ENV;
+		} else {
+			apiURL = process.env.REACT_APP_PROD_ENV;
+		}
+
+		let response = await axios.get(`${apiURL}${searchValue}`);
 		let products = response.data.items;
-		console.log(products);
+
 		let searches = this.state.searches;
 
 		if (searches.includes(searchValue)) {
@@ -81,7 +90,7 @@ class WalmartSearch extends Component {
 
 		for (let search of searches) {
 			let element = (
-				<div key="search" className="searchable" onClick={this.handleRecentClick}>
+				<div key={search} className="searchable" onClick={this.handleRecentClick}>
 					{search}
 				</div>
 			);

@@ -1,0 +1,8 @@
+{
+	"items": [
+		{
+			"name": "Network is offline",
+			"longDescription": "Please try again when your network is available"
+		}
+	]
+}

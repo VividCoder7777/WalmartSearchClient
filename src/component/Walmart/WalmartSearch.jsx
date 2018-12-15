@@ -112,22 +112,33 @@ class WalmartSearch extends Component {
 				let structure = (
 					<Media key={product.itemId}>
 						<Media.Left>
-							<img width={128} height={128} src={product.mediumImage} />
+							{product.mediumImage == null ? null : (
+								<img width={128} height={128} src={product.mediumImage} />
+							)}
 						</Media.Left>
 						<Media.Body>
 							<Media.Heading>{product.name}</Media.Heading>
-							<p>{product.longDescription}</p>
-							<p className="blue bold">Price: ${product.salePrice}</p>
+							{product.longDescription == null ? null : <p>{product.longDescription}</p>}
+							{product.salePrice == null ? null : (
+								<p className="blue bold">Price: ${product.salePrice}</p>
+							)}
 
 							<p>
 								<span className="red bold">
-									Reviews: {product.numReviews} Average Rating: {product.customerRating}
+									{product.numReviews == null ? null : (
+										<React.Fragment>Reviews: {product.numReviews}</React.Fragment>
+									)}
+									{product.customerRating == null ? null : (
+										<React.Fragment>Average Rating: {product.customerRating}</React.Fragment>
+									)}
 								</span>
 							</p>
 							<p>
-								<a href={product.productUrl} target="_blank">
-									Visit Product Page
-								</a>
+								{product.productUrl == null ? null : (
+									<a href={product.productUrl} target="_blank">
+										Visit Product Page
+									</a>
+								)}
 							</p>
 							<hr />
 						</Media.Body>
